@@ -9,7 +9,7 @@ public class ManageFileAPI : BaseConfigure
     }
 
     /// <summary>
-    /// List Dounload Files List
+    /// Dounload Files List
     /// </summary>
     /// <param name="page">Page is Pagination (Ex: 1 or 2 or 3)</param>
     /// <param name="per_page">Per Page is Max videos per page (Ex: 10 or 20 or 50)</param>

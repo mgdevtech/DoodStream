@@ -1,5 +1,4 @@
 ﻿using DoodStream.Dtos.Upload;
-using Microsoft.AspNetCore.Http;
 
 namespace DoodStream.Code;
 
@@ -24,11 +23,11 @@ public class UploadAPI : BaseConfigure
     /// <param name="file">File to upload</param>
     /// <param name="folderId">Folder Id</param>
     /// <returns>UploadDto</returns>
-    public async Task<UploadDto> UploadFile(IFormFile file, string? folderId = null)
-    {
-        var uploadUrl = await GetServerUrlUpload();
-        return await PostAPI<UploadDto>(file, uploadUrl.Result, folderId);
-    }
+    //public async Task<UploadDto> UploadFile(IFormFile file, string? folderId = null)
+    //{
+    //    var uploadUrl = await GetServerUrlUpload();
+    //    return await PostAPI<UploadDto>(file, uploadUrl.Result, folderId);
+    //}
 
     /// <summary>
     /// Upload File From Server Path
@@ -36,11 +35,11 @@ public class UploadAPI : BaseConfigure
     /// <param name="file">File Path</param>
     /// <param name="folderId">Folder Id</param>
     /// <returns>UploadDto</returns>
-    public async Task<UploadDto> UploadFile(string file, string? folderId = null)
-    {
-        var uploadUrl = GetServerUrlUpload().Result.Result;
-        return await PostAPI<UploadDto>(file, uploadUrl, folderId);
-    }
+    //public async Task<UploadDto> UploadFile(string file, string? folderId = null)
+    //{
+    //    var uploadUrl = GetServerUrlUpload().Result.Result;
+    //    return await PostAPI<UploadDto>(file, uploadUrl, folderId);
+    //}
 
     /// <summary>
     /// Copy / Clone your's or other's file

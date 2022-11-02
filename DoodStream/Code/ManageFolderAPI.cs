@@ -27,7 +27,7 @@ public class ManageFolderAPI : BaseConfigure
     /// </summary>
     /// <param required name="folderId">folder Id</param>
     /// <param required name="newName">New Name</param>
-    /// <returns></returns>
+    /// <returns>RenameDto</returns>
     public async Task<RenameDto> RenameFolderAsync(string folderId, string newName)
     {
         data.Add("fld_id", folderId);
