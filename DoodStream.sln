@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoodStream", "DoodStream\DoodStream.csproj", "{8375C08C-0088-4EF6-8C42-584836F133E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoodStream.Console", "DoodStream.Console\DoodStream.Console.csproj", "{9BAFBC4F-C8ED-4DD9-81B5-CEF7616FE76B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8375C08C-0088-4EF6-8C42-584836F133E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8375C08C-0088-4EF6-8C42-584836F133E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8375C08C-0088-4EF6-8C42-584836F133E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BAFBC4F-C8ED-4DD9-81B5-CEF7616FE76B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BAFBC4F-C8ED-4DD9-81B5-CEF7616FE76B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BAFBC4F-C8ED-4DD9-81B5-CEF7616FE76B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BAFBC4F-C8ED-4DD9-81B5-CEF7616FE76B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

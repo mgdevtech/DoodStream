@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -8,27 +8,32 @@
 		<Title>DoodStream</Title>
 		<Authors>MGNetworktech-$(AssemblyName)</Authors>
 		<Company>MGNetworkTech</Company>
-		<PackageIcon>logo-s.png</PackageIcon>
+		<PackageIcon></PackageIcon>
+		<RepositoryUrl>https://github.com/mgnetworktech/DoodStream</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackAsTool>False</PackAsTool>
+		<IncludeSymbols>False</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<SignAssembly>False</SignAssembly>
+		<PackageId>$(AssemblyName).Core</PackageId>
+		<PackageTags>doodstream;doodstream core</PackageTags>
+		<AssemblyVersion></AssemblyVersion>
+		<FileVersion></FileVersion>
+		<Description>This is a consume Doodstream API in C# App</Description>
+		<Version>1.0.1</Version>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-	  <NoWarn>1701;1702;8618,8603;8625;8604</NoWarn>
+		<NoWarn>1701;1702;8618,8603;8625;8604</NoWarn>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	  <NoWarn>1701;1702;8618,8603;8625;8604</NoWarn>
+		<NoWarn>1701;1702;8618,8603;8625;8604</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\..\..\Images\Search\logo-s.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	</ItemGroup>
 
 </Project>

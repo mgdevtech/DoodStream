@@ -66,16 +66,21 @@ public class BaseConfigure
 
         using HttpClient client = new();
         using var request = new HttpRequestMessage(new HttpMethod("POST"), $"{uploadUrl}?{Key}");
+
+        request.Headers.TryAddWithoutValidation("Accept", "application/json");
+
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(new StringContent(Key), "api_key");
         multipartContent.Add(new ByteArrayContent(file.ConvertToByte()), "file", file.FileName);
         if (!string.IsNullOrEmpty(folderId))
             multipartContent.Add(new StringContent(folderId), "fld_id");
+
         request.Content = multipartContent;
+
         var response = await client.SendAsync(request);
 
         if (!response.IsSuccessStatusCode)
-            return default(T);
+        { data.Clear(); return default(T); }
 
         var content = JsonConvert.DeserializeObject<T>(await response.Content.ReadAsStringAsync());
 
@@ -91,6 +96,9 @@ public class BaseConfigure
 
         using HttpClient client = new();
         using var request = new HttpRequestMessage(new HttpMethod("POST"), $"{uploadUrl}?{Key}");
+
+        request.Headers.TryAddWithoutValidation("Accept", "application/json");
+
         var multipartContent = new MultipartFormDataContent();
         multipartContent.Add(new StringContent(Key), "api_key");
         var file = File.ReadAllBytes(path);
@@ -99,10 +107,12 @@ public class BaseConfigure
             multipartContent.Add(new StringContent(folderId), "fld_id");
 
         request.Content = multipartContent;
+
+
         var response = await client.SendAsync(request);
 
         if (!response.IsSuccessStatusCode)
-            return default(T);
+        { data.Clear(); return default(T); }
 
         var content = JsonConvert.DeserializeObject<T>(await response.Content.ReadAsStringAsync());
 
